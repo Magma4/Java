@@ -31,7 +31,8 @@ public class Grading_system {
         System.out.println("Please enter your assessment score: ");
         assessment_score = input.nextInt();
 
-        // The sum of exam score and assessment score stored in the variable total
+        // The sum of exam score and assessment score stored in the variable called
+        // total
         int total = exam_score + assessment_score;
 
         // Create an input for fees to be stored in fee variable
