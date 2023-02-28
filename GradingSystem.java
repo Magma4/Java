@@ -12,7 +12,7 @@
 // 6. Where a student failed both component he/she is repeated.
 import java.util.Scanner; //Importing the scanner library
 
-public class Grading_system {
+public class GradingSystem {
     public static void main(String[] args) {
         // Create a variable for the scanner to be used
         Scanner input = new Scanner(System.in);
@@ -36,42 +36,53 @@ public class Grading_system {
         int total = exam_score + assessment_score;
 
         // Create an input for fees to be stored in fee variable
-        System.out.println("Please enter the percentage of fees piad between 0-100%: ");
+        System.out.println("Please enter the percentage of fees paid between 0-100: ");
         fee = input.nextInt();
 
         // Create a condition to satisfy requirement 1, 2 and 4.
-        if (exam_score >= 25 && assessment_score >= 15) {
+        if (exam_score >= 25 && assessment_score >= 15 && fee != fees) {
             System.out.println("You have passed!. You will receive your certificate");
-        } else if (total == 39) {
+        } else if (exam_score >= 25 && assessment_score >= 15 && fee == fees) {
+            System.out.println("Congratulations!, here is your certificate.");
+        } else if ((exam_score == 24 && assessment_score == 15) || (exam_score == 25 && assessment_score == 14)) {
             System.out.println("You are condoned!");
-        } else if (exam_score < 25 && assessment_score < 15 && total != 39) {
-            System.out.println("You have failed!");
         } else {
             System.out.println("You have failed!");
         }
 
         // Create a condition to satisfy req. 3.
-        if (exam_score >= 25 && assessment_score >= 15 && fee == fees) {
-            System.out.println("Congratulations!, here is your certificate.");
-        }
+        // if (exam_score >= 25 && assessment_score >= 15 && fee == fees) {
+        // System.out.println("Congratulations!, here is your certificate.");
+        // }
 
         // Create a condition to satisfy req. 5
-        if (exam_score >= 25) {
-            System.out.println("You have passed the exam score!");
-        } else {
-            System.out.println("You have failed the exam score!");
-        }
+        // if (exam_score >= 25) {
+        // System.out.println("You have passed the exam score!");
+        // } else {
+        // System.out.println("You have failed the exam score!");
+        // }
 
-        // Create a condition to satisfy req. 5 contd
-        if (assessment_score >= 15) {
-            System.out.println("You have passed the assessment score!");
-        } else {
-            System.out.println("You have failed the assessment score!");
-        }
+        // // Create a condition to satisfy req. 5 contd
+        // if (assessment_score >= 15) {
+        // System.out.println("You have passed the assessment score!");
+        // } else {
+        // System.out.println("You have failed the assessment score!");
+        // }
 
-        // Create a condition to satisfy req 6.
-        if (exam_score < 25 && assessment_score < 15) {
-            System.out.println("You have been repeated!");
-        }
+        // // Create a condition to satisfy req 6.
+        // if (exam_score < 25 && assessment_score < 15) {
+        // System.out.println("You have been repeated!");
+        // }
+        if ((exam_score >= 25 && assessment_score >= 15)) {
+            System.out.println("You have passed both components");
+        } else if (exam_score >= 25 && assessment_score < 15) {
+            System.out.println("You passed the exam component but failed the assessment component");
+        } else if (exam_score < 25 && assessment_score >= 15) {
+            System.out.println("You have failed the exam component but passed the assessment compoenent");
+        } else if (exam_score < 25 && assessment_score < 15) {
+            System.out.println("You failed both components so you have been repeated!");
+        } // } else {
+          // // System.out.println("You have been repeated");
+          // // }
     }
 }
