@@ -10,6 +10,7 @@
 // 4. A student is deemed to have failed if he/she does not meet req. 1 or req. 2
 // 5. However, your program must inform a student which component he/she passed/failed
 // 6. Where a student failed both component he/she is repeated.
+
 import java.util.Scanner; //Importing the scanner library
 
 public class GradingSystem {
