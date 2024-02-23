@@ -47,6 +47,9 @@ public class Dog {
             System.out.println(barkNoise);
         }
 
+        public void bark(String barkNosie){
+            System.out.println(barkNoise);
+        }
         
     
 }
