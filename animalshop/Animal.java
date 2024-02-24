@@ -2,12 +2,10 @@ package animalshop;
 
 public class Animal {
     private String name;
-    private String breed;
     private String colour;
 
-    public Animal(String name, String breed, String colour){
+    public Animal(String name, String colour){
         this.name = name;
-        this.breed = breed;
         this.colour = colour;
 
     }
@@ -18,14 +16,6 @@ public class Animal {
 
     public void setName(String name){
         this.name = name;
-    }
-
-    public String getBreed(){
-        return breed;
-    }
-
-    public void setBreed(String breed){
-        this.breed = breed;
     }
 
     public String getColour(){
