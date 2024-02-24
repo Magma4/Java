@@ -8,5 +8,11 @@ public class Fish extends Animal {
         this.waterType = waterType;
     }
 
-    
+    public String getWatertype(){
+        return waterType;
+    }
+
+    public void setWatertype(String waterType){
+        this.waterType = waterType;
+    }
 }
