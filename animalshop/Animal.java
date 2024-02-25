@@ -1,21 +1,21 @@
 package animalshop;
 
 public class Animal {
-    private String name;
+    private String breed;
     private String colour;
 
-    public Animal(String name, String colour){
-        this.name = name;
+    public Animal(String breed, String colour){
+        this.breed = breed;
         this.colour = colour;
 
     }
 
-    public String getName(){
-        return name;
+    public String getBreed(){
+        return breed;
     }
 
-    public void setName(String name){
-        this.name = name;
+    public void setName(String breed){
+        this.breed = breed;
     }
 
     public String getColour(){

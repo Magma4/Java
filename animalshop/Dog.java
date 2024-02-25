@@ -3,27 +3,27 @@ package animalshop;
 public class Dog extends Animal {
         private String barkNoise = "Woof";
         private double weight;
-        private String breed;
+        private String name;
 
-        public Dog(String name, String breed, String colour, double weight){
-            super(name, colour);
-            this.breed = breed;
+        public Dog(String name, String breed, double weight, String colour){
+            super(breed, colour);
+            this.name = name;
             this.weight = weight;
         }
 
-        public Dog(String name, String breed, String barknoise, String colour, double weight){
-            super(name, colour);
+        public Dog(String name, String breed, String barknoise, double weight, String colour){
+            super(breed, colour);
             this.barkNoise = barknoise;
-            this.breed = breed;
+            this.name = name;
             this.weight = weight;
         }
         
-        public String getBreed(){
-            return breed;
+        public String getName(){
+            return name;
         }
 
-        public void setBreed(String breed){
-            this.breed = breed;
+        public void setName(String name){
+            this.name = name;
         }
 
         public String getBarknoise() {
@@ -41,6 +41,14 @@ public class Dog extends Animal {
 
         public void setWeight(double weight){
             this.weight = weight;
+        }
+
+        public void bark(){
+            System.out.println(barkNoise);
+        }
+
+        public void bark(String barkNoise){
+            System.out.println(barkNoise);
         }
     
 }
