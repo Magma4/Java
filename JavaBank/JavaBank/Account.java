@@ -1,6 +1,6 @@
 package JavaBank;
 
-public class Account {
+public class Account implements InterfaceBankAccount {
 
 	// class variables
 		String accountname;
@@ -8,7 +8,7 @@ public class Account {
 	    int balance;
 	    
 	    //default constructor for Account
-	    Account()
+	    public Account()
 	    {
 	    	this.accountname="EMPTY";
 	    	this.accountnum=0;
@@ -59,13 +59,24 @@ public class Account {
 	    	return accountnum;
 	    }
 	  //accessor to get the account balance
-	    public int getbalance ( ) {
+	    public int getbalance () {
 	      	 
 	    	return balance;
 	    }
+
+		
+		
+		public String getBankName(){
+			return InterfaceBankAccount.BANK;
+		}
+	    
 	    
 	    //print method 
 	    public void print() {
-	        System.out.println(accountname + " " + accountnum + " " + balance);
+	        System.out.println("Bank Name :" + getBankName());
+			System.out.println("Account Holder :" + accountname);
+			System.out.println("Account Number :" + accountnum);
+			System.out.println("Account Balance :" + balance);
 	      }
+
 	}

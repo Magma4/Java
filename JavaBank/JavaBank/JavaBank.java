@@ -15,6 +15,8 @@ public class JavaBank extends JFrame {
     public String Name;
     public int Accountnum;
     public int Balance;
+    CompanyColor companyColor = new CompanyColor();
+    private Color myColor = new Color(companyColor.getR(), companyColor.getG(), companyColor.getB());
 
     
     // JPanel for user inputs
@@ -87,6 +89,7 @@ public class JavaBank extends JFrame {
     private void createUserInterface() {
         // get content pane for attaching GUI components
         Container contentPane = getContentPane();
+        contentPane.setBackground(myColor);
  
         // enable explicit positioning of GUI components
         contentPane.setLayout(null);
@@ -96,6 +99,8 @@ public class JavaBank extends JFrame {
         inputDetailJPanel.setBounds(16, 16, 208, 250);
         inputDetailJPanel.setBorder(new TitledBorder("Input Details"));
         inputDetailJPanel.setLayout(null);
+
+        inputDetailJPanel.setBackground(myColor);
         contentPane.add(inputDetailJPanel);
  
         // set up NameJLabel
@@ -420,5 +425,23 @@ public class JavaBank extends JFrame {
         JavaBank application = new JavaBank();
         application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
+
+    for(int i=0; i<noAccounts; i++){
+        displayJTextArea.setText(
+            "Bank Name :" + myAccounts[i].getBankName()
+          + "\n Account Holder :" + myAccounts[i].getaccountname()
+          + "\n Account Number :" + myAccounts[i].getaccountnum()
+          + "\n Account Balance :" + myAccounts[i].getbalance()
+        );
+    }
+
+    private void displayAccountDetails(String bName, String aName, int aNum, int aBal){
+        displayJTextArea.setText("Bank Name :" + bName
+                                + "\nAccount Holder :" + aName
+                                + "\nAccount Number :" + aNum
+                                + "\nAccount Balance :" + aBal    
+        );
+    }
+
  
 }
