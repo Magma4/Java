@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Egg",
+            "request": "launch",
+            "mainClass": "classesandobjects.Egg",
+            "projectName": "Java_e2b2c064"
+        },
+        {
+            "type": "java",
+            "name": "Chicken",
+            "request": "launch",
+            "mainClass": "classesandobjects.Chicken",
+            "projectName": "Java_e2b2c064"
+        },
+        {
+            "type": "java",
+            "name": "Swan",
+            "request": "launch",
+            "mainClass": "classesandobjects.Swan",
+            "projectName": "Java_e2b2c064"
+        },
+        {
+            "type": "java",
             "name": "ImportExample",
             "request": "launch",
             "mainClass": "OCA.ImportExample",
