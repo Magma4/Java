@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "testBank",
+            "request": "launch",
+            "mainClass": "JavaBank.testBank",
+            "projectName": "Java_e2b2c064"
+        },
+        {
+            "type": "java",
+            "name": "JavaBank",
+            "request": "launch",
+            "mainClass": "JavaBank.JavaBank",
+            "projectName": "Java_e2b2c064"
+        },
+        {
+            "type": "java",
             "name": "Egg",
             "request": "launch",
             "mainClass": "classesandobjects.Egg",
